@@ -1,0 +1,123 @@
+/* estilo geral */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+header{
+    width: 100%;
+    padding: 28px 8%;
+    background-color: #4d2d18d2;
+}
+
+.btn-default{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4d2d18;
+    border-radius: .5rem;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #fff;
+    transition: .3s;
+    font-size: 13px;
+}
+
+.btn-default:hover{
+    background-color: #fff;
+    color: #4d2d18;
+}
+
+/* menu desktop */
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-logo{
+    width: 50px;
+}
+
+#nav-list{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.nav-item.active a{
+    color: #4d2d18;
+    border-bottom: 2px solid #4d2d18;
+    font-weight: 600;
+    transition: .3s; /* eu q coloquei */
+}
+
+.nav-item:hover a{
+    color: #4d2d18;
+    font-weight: 600;
+}
+
+/* fim menu desktop  */
+
+/* menu mobile */
+#mobile-btn{
+    display: none;
+}
+
+#mobile-menu{
+    display: none;
+}
+
+/* fim menu mobile */
+
+@media screen and (max-width: 1170px) {
+    #nav-list,
+    #navbar .btn-default{
+        display: none;
+    }
+
+    #mobile-btn{
+        display: block;
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    #mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile-nav-list{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        margin: .8rem 0;
+    }
+
+    #mobile-nav-list .nav-item{
+        list-style: none;
+        text-align: center;
+    }
+}
