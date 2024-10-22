@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- jquery -->
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- scroll reveal -->
     <title>Neni | Doceria Artesanal</title>
 </head>
 <body>
@@ -19,42 +20,58 @@
         <nav id="navbar">
             <ul id="nav-list">
                 <li class="nav-item active"> 
-                    <a href="#home">Início</a>
+                    <a href="index.html">Início</a>
                 </li>
                 <li class="nav-item"> 
                     <a href="#menu">Cardápio</a>
                 </li>
                 <img id="nav-logo" src="assets/logo-neni.jpeg" alt="Logo da Neni Doces Artesanais">
                 <li class="nav-item"> 
-                    <a href="#testimonial">Avaliações</a>
+                    <a href="#testimonials">Avaliações</a>
                 </li>
                 <li class="nav-item"> 
                     <a href="#requested">Encomendar</a>
                 </li>
             </ul>
-
-            <button id="mobile-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </nav>
 
-        <div id="mobile-menu">
-            <ul id="mobile-nav-list">
-                <li class="nav-item"> 
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item"> 
-                    <a href="#menu">Cardápio</a>
-                </li>
-                <li class="nav-item"> 
-                    <a href="#testimonial">Avaliações</a>
-                </li>
-            </ul>
-
-            <button class="btn-default">
-                Faça seu pedido
-            </button>
+        <div class="interface-mobile">
+            <div class="logo-mobile">
+                <img src="assets/logo-neni-mobile.png" alt="">
+            </div>
+    
+            <div class="btn-open-menu" id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
+
+
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-close">
+                    <i class="fa-solid fa-times"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li> 
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li> 
+                        <a href="#menu">Cardápio</a>
+                    </li>
+                    <li> 
+                        <a href="#testimonials">Avaliações</a>
+                    </li>
+                </ul>                       
+                    <button class="btn-requested-mobile">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">Fazer pedido</a>
+                    </button>
+            </nav>
+        </div>
+
+        <div class="overlay-menu"></div>
+
     </header>
         
     <main id="content">
